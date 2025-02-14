@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon run app.js"
+    "dev": "bun --hot run app.js"
   },
   "dependencies": {
+    "@arcjet/bun": "1.0.0-beta.2",
+    "a": "^3.0.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -21,7 +23,6 @@
   "devDependencies": {
     "@eslint/js": "^9.20.0",
     "eslint": "^9.20.0",
-    "globals": "^15.14.0",
-    "nodemon": "^3.1.9"
+    "globals": "^15.14.0"
   }
 }

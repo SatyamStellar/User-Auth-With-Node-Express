@@ -22,6 +22,8 @@ const authorize = async (req, res, next) => {
         next();
 
     } catch (error) {
+
+        console.error('Authorization Error:', error.message); // Debugging
         res.status(401).json({ success: false, message: 'Unauthorized', error: error.message });
     }
 };

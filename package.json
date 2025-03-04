@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "dev": "bun --hot run app.js"
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "@arcjet/bun": "^1.0.0-beta.2",
@@ -19,7 +19,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.13.0",
     "mongoose": "^8.10.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

@@ -10,8 +10,6 @@ This is a Node.js backend API built with Express.js, designed to handle authenti
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 ### Clone the repository:
@@ -113,5 +111,3 @@ project-root/
 └── package.json           # Project dependencies and scripts
 ```
 
-## License
-This project is licensed under the MIT License. See `LICENSE` for more details.

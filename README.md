@@ -21,21 +21,41 @@ cd <project-folder>
 ```
 ### Install the dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 ## Prerequisites
 - Node.js (version 14.x or higher)
 - MongoDB (local or remote instance)
-- npm (comes with Node.js)
+- pnpm (comes with Node.js)
 
 ## Configuration
 Create a `.env` file in the root directory based on the provided `env.js` or `.env.example` (if available):
 ```env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/your-database-name
-JWT_SECRET=your-secret-key
-ARCCJET_API_KEY=your-arccjet-api-key
+#Port
+PORT=5550
+SERVER_URL="http://localhost:5550"
+
+#Environment
+NODE_ENV=development
+
+#Database
+DB_URI="<your-mongodb-uri>"
+
+#JWT
+JWT_SECRET="<your-jwt-secret>"
+JWT_EXPIRES_IN="7d"
+
+#ARCJET
+ARCJET_KEY="<your-arcjet-key>"
+ARCJET_ENV=development
+
+#QSTASH
+QSTASH_URL="https://qstash.upstash.io"
+QSTASH_TOKEN="<your-qstash-token>"
+QSTASH_CURRENT_SIGNING_KEY="<your-current-signing-key>"
+QSTASH_NEXT_SIGNING_KEY="<your-next-signing-key>"
+
 ```
 Update the `config/arccjet.js` and `database/mongodb.js` files with your specific configurations if needed.
 
@@ -44,11 +64,11 @@ Ensure MongoDB is running locally or your remote MongoDB instance is accessible.
 
 Start the application:
 ```bash
-npm start
+pnpm start
 ```
 Or, for development with auto-reloading:
 ```bash
-npm run dev
+pnpm run dev
 ```
 (Note: You may need to install `nodemon` as a dev dependency for the `dev` script.)
 
@@ -92,18 +112,6 @@ project-root/
 ├── README.md              # This file
 └── package.json           # Project dependencies and scripts
 ```
-
-## Contributing
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Description of your changes"
-   ```
-4. Push to the branch and submit a pull request.
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for more details.
